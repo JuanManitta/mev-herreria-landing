@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --bg-primary: #E3E1D9;
+    --bg-secondary: #3D3B40;
+    --text-secondary: #5c5858;
+    --text-primary: #ffffff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-primary) ;
+    margin: 0 auto;
+}
+
+.home_hero_img {
+    -webkit-box-shadow: 10px 10px 26px -8px #3D3B40;
+    -moz-box-shadow: 10px 10px 26px -8px #3D3B40;
+    box-shadow: 10px 10px 26px -8px #3D3B40;
+}
