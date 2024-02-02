@@ -5,13 +5,13 @@ import { UilUsdCircle } from '@iconscout/react-unicons'
 
 export const ValueSection = () => {
   return (
-    <>
-
-      <div className="pt-14">
+    <div>
+    
+      <div className="mb-12">
         <h2 className="text-[var(--text-primary)] text-4xl text-center">¿Porqué elegirnos?</h2>
       </div>
 
-      <div className="flex gap-6 max-w-7xl m-auto pt-14">
+      <div className="flex gap-6 max-w-7xl m-auto">
         <div>
           <div className='flex'>
             <UilBedDouble color='var(--text-primary)' />
@@ -38,6 +38,6 @@ export const ValueSection = () => {
         </div>
       </div>
 
-    </>
+    </div>
   )
 }

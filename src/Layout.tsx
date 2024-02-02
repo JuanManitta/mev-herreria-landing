@@ -1,4 +1,5 @@
 import Logo from './assets/mev-logo.png'
+import { Footer } from './components/Footer'
 
 type LayoutProps = {
     children: React.ReactNode
@@ -22,6 +23,7 @@ export const Layout = ({children}: LayoutProps) => {
     </nav>
 
     {children}
+    <Footer/>
     </>
   )
 }

@@ -32,8 +32,16 @@ import {
                     transition:'0.2s',
                     color:'var(--bg-secondary)'
                 }
+            },
+            secondary:{
+              backgroundColor: 'var(--bg-primary)',
+              _hover:{
+                backgroundColor: 'gray',
+                transition:'0.2s',
+                color:'var(--text-primary)'
             }
-        }
+            }
+          }
       },
     },
   })

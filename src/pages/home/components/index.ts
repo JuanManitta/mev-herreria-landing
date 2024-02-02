@@ -1,2 +1,5 @@
 export * from './HeroSection'
 export * from './ValueSection'
+export * from './ProductsPreview'
+export * from './CustomersReviews'
+export * from './TopSellingProducts'
