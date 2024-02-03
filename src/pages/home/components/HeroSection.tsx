@@ -1,9 +1,13 @@
 import { UilWhatsapp, UilInstagram, UilEnvelope } from '@iconscout/react-unicons'
 import { Button } from '@chakra-ui/react'
 import fondo from '../../../assets/fondo2.jpg'
+import { useNavigate } from 'react-router'
 
 
 export const HeroSection = () => {
+
+    const navigate = useNavigate()
+
   return (
     <>
         <div className="col-span-2 flex items-center">
@@ -32,7 +36,7 @@ export const HeroSection = () => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, officia. Suscipit, maxime totam. Modi placeat earum animi qui sit, dignissimos quia. Praesentium, tempora sint nesciunt molestias ea aliquid est beatae!</p>
                     </div>
                     <div>
-                        <Button variant='primary'>
+                        <Button onClick={() => navigate('/contacto')} variant='primary'>
                             Contactar
                         </Button>
                     </div>

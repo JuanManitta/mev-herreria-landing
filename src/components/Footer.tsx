@@ -5,12 +5,33 @@ import { UilMapMarker } from '@iconscout/react-unicons'
 
 
 import ArmcharLamp from '../assets/armchair-lamp.png'
+import { useNavigate } from 'react-router'
 
 
-
+const footerMenu = [
+    {
+        name: 'Productos',
+        url: '/productos'
+    },
+    {
+        name: 'Galeria',
+        url: '/galeria'
+    },
+    {
+        name: 'Nosotros',
+        url: '/about'
+    },
+    {
+        name: 'Reseñas',
+        url: '/reseñas'
+    }
+]
 
 
 export const Footer = () => {
+
+    const navigate = useNavigate();
+
   return (
     <section className="h-[400px] bg-[color:var(--bg-secondary)] p-16 relative">
         <div className='absolute top-10 right-0'>
@@ -50,18 +71,14 @@ export const Footer = () => {
                 
                 <div>
                     <div className="flex flex-col gap-6 col-span-4">
-                    <span className="text-xl font-semibold text-[var(--text-primary)] cursor-pointer underline hover:text-[var(--bg-primary)]">
-                        Productos
-                    </span>
-                    <span className="text-xl font-semibold text-[var(--text-primary)] cursor-pointer underline hover:text-[var(--bg-primary)]">
-                        Galeria
-                    </span>
-                    <span className="text-xl font-semibold text-[var(--text-primary)] cursor-pointer underline hover:text-[var(--bg-primary)]">
-                        Nosotros
-                    </span>
-                    <span className="text-xl font-semibold text-[var(--text-primary)] cursor-pointer underline hover:text-[var(--bg-primary)]">
-                        Reseñas
-                    </span>
+                        {footerMenu.map(( { name, url } ) => (
+                            <span
+                                onClick={() => navigate(url)}
+                                key={ url } 
+                                className="text-xl font-semibold text-[var(--text-primary)] cursor-pointer underline hover:text-[var(--bg-primary)]">
+                                { name }
+                            </span>
+                        ))}
                     </div>
                 </div>
 

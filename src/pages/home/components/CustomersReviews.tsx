@@ -3,6 +3,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 import EmblaCarousel from "../../../components/carousel-small/EmblaCarousel";
 
 import '../../../components/carousel-small/css/embla.css'
+import { useNavigate } from "react-router";
 
 
 
@@ -12,6 +13,9 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 
 export const CustomersReviews = () => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-7xl m-auto grid grid-cols-5 h-full">
 
@@ -23,7 +27,7 @@ export const CustomersReviews = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, tempore repellat voluptates fugiat eveniet mollitia. Voluptate suscipit labore sit vel voluptates aperiam autem? Error voluptate doloribus beatae inventore, asperiores amet.</p>
         </div>
         <div>
-        <Button variant='secondary'>Ver más</Button>
+        <Button onClick={() => navigate('/reseñas')} variant='secondary'>Ver más</Button>
         </div>
       </div>
 

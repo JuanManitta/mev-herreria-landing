@@ -4,6 +4,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 import EmblaCarousel from '../../../components/carousel/EmblaCarousel';
 
 import '../../../components/carousel/css'
+import { useNavigate } from 'react-router';
 
 const OPTIONS: EmblaOptionsType = {}
 const SLIDE_COUNT = 20
@@ -11,6 +12,8 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 
 export const ProductsPreview = () => {
+
+    const navigate = useNavigate();
 
     
 
@@ -37,7 +40,7 @@ export const ProductsPreview = () => {
 
             </div>
             <div className=''>
-                <Button variant='primary'>Ver más</Button>
+                <Button onClick={() => navigate('/productos')} variant='primary'>Ver más</Button>
             </div>
             
         </div>
