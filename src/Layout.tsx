@@ -2,6 +2,8 @@ import { useLocation, useNavigate } from 'react-router'
 import Logo from './assets/mev-logo.png'
 import { Footer } from './components/Footer'
 import { useEffect, useState } from 'react';
+import { IconButton, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import { Armchair, Image, Mail, MenuIcon, PersonStanding } from 'lucide-react';
 
 type LayoutProps = {
     children: React.ReactNode
@@ -9,19 +11,23 @@ type LayoutProps = {
 const menu = [
     {
         name: 'Productos',
-        url: '/productos'
+        url: '/productos',
+        icon: <Armchair size={20} />
     },
     {
         name: 'Galeria',
-        url: '/galeria'
+        url: '/galeria',
+        icon: <Image size={20} />
     },
     {
         name: 'Contacto',
-        url: '/contacto'
+        url: '/contacto',
+        icon: <Mail size={20} />
     },
     {
         name: 'About',
-        url: '/about'
+        url: '/about',
+        icon: <PersonStanding size={20} />
     }
 ];
 
@@ -49,7 +55,29 @@ export const Layout = ( {children}: LayoutProps ) => {
     <>
     <nav className={` h-[60px] sticky top-0 ${scrolled ? 'bg-[color:var(--bg-primary)] z-50 shadow-lg' : ''}`}>
 
-        <div className='max-w-7xl m-auto flex justify-around'>
+        <div className='max-w-7xl m-auto flex justify-between sm:justify-around px-6 sm:p-0'>
+
+            <div className='sm:hidden flex items-center'>
+                <Menu>
+                  <MenuButton
+                    as={IconButton}
+                    aria-label='Options'
+                    icon={<MenuIcon />}
+                    variant='outline'
+                  />
+                  <MenuList>
+                    {menu.map((item, index) => (
+                        <MenuItem 
+                            key={index} 
+                            onClick={() => navigate(item.url)} 
+                            icon={item.icon}
+                        >
+                            {item.name}
+                        </MenuItem>
+                    ))}
+                  </MenuList>
+                </Menu>
+            </div>
 
             <div>
                 <img onClick={() => navigate('/')} 
@@ -57,7 +85,7 @@ export const Layout = ( {children}: LayoutProps ) => {
                 src={Logo} alt="" />
             </div>
 
-            <div className='flex items-center'>
+            <div className='sm:flex items-center hidden'>
                 <ul className="flex gap-6">
                     {menu.map((item, index) => (
                         <li 

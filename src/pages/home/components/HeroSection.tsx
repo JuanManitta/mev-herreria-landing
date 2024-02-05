@@ -10,7 +10,7 @@ export const HeroSection = () => {
 
   return (
     <>
-        <div className="col-span-2 flex items-center">
+        <div className="hidden col-span-12 sm:col-span-2 sm:flex items-center">
             <div className='flex flex-col gap-3'>
                 <div className='flex justify-center'>
                     <div className='bg-[color:var(--text-secondary)] w-[1.5px] h-32'></div>
@@ -24,7 +24,7 @@ export const HeroSection = () => {
             </div>
         </div>
 
-        <div className="col-span-5 flex flex-col items-center justify-center mr-6">
+        <div className="col-span-12 sm:col-span-5 flex flex-col items-center justify-center mr-0 sm:mr-6 p-6 sm:p-0">
             <div className='grid grid-cols-1 gap-10'>
                 <div>
                     <div>
@@ -36,7 +36,9 @@ export const HeroSection = () => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, officia. Suscipit, maxime totam. Modi placeat earum animi qui sit, dignissimos quia. Praesentium, tempora sint nesciunt molestias ea aliquid est beatae!</p>
                     </div>
                     <div>
-                        <Button onClick={() => navigate('/contacto')} variant='primary'>
+                        <Button
+                            className='mt-12 sm:mt-0 ' 
+                            onClick={() => navigate('/contacto')} variant='primary'>
                             Contactar
                         </Button>
                     </div>
@@ -44,24 +46,24 @@ export const HeroSection = () => {
                 <div>
                     <div className='flex justify-between mt-10 mr-2'>
                         <div>
-                            <p className='text-center text-2xl font-semibold'>+200</p>
-                            <p className='text-sm'>Productos fabricados</p>
+                            <p className='text-left sm:text-center text-2xl font-semibold'>+200</p>
+                            <p className='text-sm text-left'>Productos fabricados</p>
                         </div>
                         <div>
                             <p className='text-center text-2xl font-semibold'>+5</p>
-                            <p className='text-sm'>Años en el mercado</p>
+                            <p className='text-sm text-center'>Años en el mercado</p>
                         </div>
                         <div>
-                            <p className='text-center text-2xl font-semibold'>+80</p>
-                            <p className='text-sm'>Clientes contentos</p>
+                            <p className='text-right sm:text-center text-2xl font-semibold'>+80</p>
+                            <p className='text-sm text-right'>Clientes contentos</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div className="col-span-5 flex items-center">
-           <img className='home_hero_img' style={{borderRadius:'90px', opacity: 0.9}} src={fondo} alt="" />
+        <div className="col-span-12 sm:col-span-5 flex items-center">
+           <img className='hidden sm:block home_hero_img' style={{borderRadius:'90px', opacity: 0.9}} src={fondo} alt="" />
         </div>
     </>
   )
