@@ -10,11 +10,6 @@
     --font-primary: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: var(--bg-primary) ;
-    margin: 0 auto;
-}
-
 .home_hero_img {
     -webkit-box-shadow: 10px 10px 26px -8px #3D3B40;
     -moz-box-shadow: 10px 10px 26px -8px #3D3B40;

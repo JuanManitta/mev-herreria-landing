@@ -1,18 +1,14 @@
 
-import { extendBaseTheme, theme as chakraTheme, } from '@chakra-ui/react'
-  
-const { Menu } = chakraTheme.components
-  
-  
+import { extendBaseTheme  } from '@chakra-ui/react'
+import { menuTheme } from './menuTheme'
+import { globalProps } from './globalTheme'
+
+// const { Menu } = chakraTheme.components
+
   
   export const theme = extendBaseTheme({
     styles:{
-      global:{
-        body:{
-          bg:'var(--bg-primary)',
-          fontFamily:'var(--font-primary)',
-        }
-      }
+      global: globalProps
     },
     components: {
       Button: {
@@ -41,7 +37,8 @@ const { Menu } = chakraTheme.components
             }
           }
       },
-      Menu,
+      Menu: menuTheme
+      
     },
   })
   
