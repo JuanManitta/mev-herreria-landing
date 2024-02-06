@@ -28,7 +28,7 @@ export const Home = () => {
         <ProductsPreview />
       </section>
       
-      <section className="h-[450px] bg-[color:var(--bg-secondary)]">
+      <section className="sm:h-[450px] bg-[color:var(--bg-secondary)]">
         <CustomersReviews/>
       </section>
 
