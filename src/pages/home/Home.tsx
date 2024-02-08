@@ -20,15 +20,15 @@ export const Home = () => {
         <HeroSection />
       </section>
 
-      <section className="sm:h-[450px] bg-[color:var(--bg-secondary)] grid grid-cols-1 p-6 py-16 items-center ">
+      <section className="sm:h-[500px] bg-[color:var(--bg-secondary)] grid grid-cols-1 p-6 py-16 items-center ">
         <ValueSection/>
       </section>
 
-      <section className="sm:h-[calc(100vh)] max-w-7xl m-auto grid grid-cols-12 items-center sm:gap-10 p-6 py-16 sm:pb-0">
+      <section className="sm:h-[calc(100vh)] max-w-7xl m-auto grid grid-cols-12 items-center sm:gap-10 p-6 py-16 ">
         <ProductsPreview />
       </section>
       
-      <section className="sm:h-[450px] bg-[color:var(--bg-secondary)] p-6 py-16">
+      <section className="sm:h-[500px] bg-[color:var(--bg-secondary)] p-6 py-16">
         <CustomersReviews/>
       </section>
 

@@ -22,7 +22,7 @@ export const ValueSection = () => {
         </div>
 
 
-        <div className='sm:mt-0'>
+        <div className='mt-12 sm:mt-0'>
           <div className='flex sm:justify-normal'>
             <UilCreditCard color='var(--text-primary)' />
             <p className="text-[var(--text-primary)] ml-2 text-lg font-medium mb-3">Cuotas fijas</p>
