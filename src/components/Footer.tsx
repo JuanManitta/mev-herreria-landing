@@ -34,8 +34,12 @@ export const Footer = () => {
 
   return (
     <section className="sm:h-[400px] bg-[color:var(--bg-secondary)] p-12 sm:p-16 relative">
-        <div className='absolute bottom-10 sm:bottom-0 sm:top-10 left-52'>
+
+        <div className='hidden sm:block absolute top-10 right-0'>
             <img className=' sm:w-4/6' src={ArmcharLamp} alt="" />
+        </div>
+        <div className='sm:hidden absolute bottom-10 left-52'>
+            <img className='w-4/5 sm:w-4/6' src={ArmcharLamp} alt="" />
         </div>
 
         <div className="max-w-7xl m-auto grid grid-cols-12 gap-4">
