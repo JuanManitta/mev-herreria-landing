@@ -5,7 +5,7 @@ import { UilUsdCircle } from '@iconscout/react-unicons'
 
 export const ValueSection = () => {
   return (
-    <div className='p-6'>
+    <div>
     
       <div className="mb-12">
         <h2 className="text-[var(--text-primary)] text-4xl text-center">¿Porqué elegirnos?</h2>
@@ -22,7 +22,7 @@ export const ValueSection = () => {
         </div>
 
 
-        <div className='mt-12 sm:mt-0'>
+        <div className='sm:mt-0'>
           <div className='flex sm:justify-normal'>
             <UilCreditCard color='var(--text-primary)' />
             <p className="text-[var(--text-primary)] ml-2 text-lg font-medium mb-3">Cuotas fijas</p>

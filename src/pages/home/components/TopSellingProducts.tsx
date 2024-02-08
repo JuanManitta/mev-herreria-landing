@@ -8,13 +8,13 @@ export const TopSellingProducts = () => {
   const navigate = useNavigate();
 
   return (
-    <div className='py-12'>
+    <div>
 
-      <div className="h-[20vh] flex items-center justify-center">
+      <div className="flex items-center justify-center mb-12">
         <h4 className="text-center text-4xl font-semibold">Top ventas</h4>
       </div>
 
-      <div className="grid grid-cols-4 gap-6 p-6 sm:p-0">
+      <div className="grid grid-cols-4 gap-12 sm:p-0">
 
         <div className="col-span-4 sm:col-span-1">
           <img className='w-full h-64 object-cover' style={{borderRadius:'20px', opacity: 0.9}} src={middleImg} alt="" />

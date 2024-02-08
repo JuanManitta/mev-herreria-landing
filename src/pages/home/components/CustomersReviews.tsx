@@ -19,7 +19,7 @@ export const CustomersReviews = () => {
   return (
     <div className="max-w-7xl m-auto grid grid-cols-5 h-full">
 
-      <div className="col-span-12 sm:col-span-2  flex flex-col justify-center px-6 pt-12 sm:p-6">
+      <div className="col-span-12 sm:col-span-2  flex flex-col justify-center sm:p-6">
         <div>
           <h4 className="text-3xl mb-6 text-[var(--text-primary)]">Reseñas de nuestros clientes</h4>
         </div>
@@ -37,7 +37,7 @@ export const CustomersReviews = () => {
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </section>
         </main>
-        <div className=" sm:hidden p-6 pb-16">
+        <div className=" sm:hidden mt-6">
           <Button className="w-full" onClick={() => navigate('/reseñas')} variant='secondary'>Ver más</Button>
         </div>
       </div>

@@ -19,20 +19,20 @@ export const ProductsPreview = () => {
 
   return (
     <>
-        <div className="col-span-12 order-last sm:order-first sm:col-span-6 p-6">
+        <div className="col-span-12 order-last sm:order-first sm:col-span-6">
             <main className="bg-[color:#d5d3c9]  rounded-3xl home_carousel_container">
               <section>
                 <EmblaCarousel slides={SLIDES} options={OPTIONS} />
               </section>
             </main>
             <div className='sm:hidden mt-12'>
-                <Button className='w-full' onClick={() => navigate('/productos')} variant='primary'>Ver más</Button>
+                <Button className='w-full mt-6' onClick={() => navigate('/productos')} variant='primary'>Ver más</Button>
             </div>
         </div>
 
-        <div className="p-6 col-span-12 sm:col-span-6 flex flex-col justify-center gap-10">
+        <div className="col-span-12 sm:col-span-6 flex flex-col justify-center gap-10">
             <div>
-                <h3 className='text-4xl font-semibold pt-12 sm:pt-0'>
+                <h3 className='text-4xl font-semibold sm:pt-0'>
                     Inspirá el interior de tu hogar.
                 </h3>
             </div>
