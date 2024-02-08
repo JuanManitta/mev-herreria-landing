@@ -32,7 +32,7 @@ export const Home = () => {
         <CustomersReviews/>
       </section>
 
-      <section className="max-h-[calc(100vh+100px)] max-w-7xl m-auto">
+      <section className="sm:max-h-[calc(100vh+100px)] max-w-7xl m-auto">
         <TopSellingProducts />
       </section>
 

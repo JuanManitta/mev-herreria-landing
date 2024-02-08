@@ -33,20 +33,20 @@ export const Footer = () => {
     const navigate = useNavigate();
 
   return (
-    <section className="h-[400px] bg-[color:var(--bg-secondary)] p-16 relative">
-        <div className='absolute top-10 right-0'>
-            <img className='w-4/6' src={ArmcharLamp} alt="" />
+    <section className="sm:h-[400px] bg-[color:var(--bg-secondary)] p-12 sm:p-16 relative">
+        <div className='absolute bottom-10 sm:bottom-0 sm:top-10 left-52'>
+            <img className=' sm:w-4/6' src={ArmcharLamp} alt="" />
         </div>
 
         <div className="max-w-7xl m-auto grid grid-cols-12 gap-4">
-            <div className='col-span-8 flex justify-around' >
+            <div className='col-span-12 sm:col-span-8 sm:gap-0 sm:flex justify-around' >
                 <div>
                     <div>
                         <span className="text-xl font-semibold text-[var(--text-primary)] ">
                             Contacto
                         </span>
                     </div>
-                    <div className='mt-12'>
+                    <div className='mt-12 mb-16 sm:mb-0 '>
                         <ul>
                             <li className='flex gap-3'>
                                 <UilMapMarker size="20" color='white' />
@@ -68,6 +68,7 @@ export const Footer = () => {
 
                     </div>
                 </div>
+                <hr className='sm:hidden mb-12 opacity-30' />
                 
                 <div>
                     <div className="flex flex-col gap-6 col-span-4">
@@ -87,7 +88,7 @@ export const Footer = () => {
             <div className='opacity-25 w-[1px]  bg-[color:var(--bg-primary)] col-span-1'></div>
             <div className='col-span-3'></div>
             <div className='col-span-12 pt-10'>
-                <p className='text-center text-white text-xs'>&#169; MEV HERRERIA 2024</p>
+                <p className='text-left sm:text-center text-white text-xs'>&#169; MEV HERRERIA 2024</p>
             </div>
         </div>
         
