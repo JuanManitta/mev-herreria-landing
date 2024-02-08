@@ -5,7 +5,7 @@ import { UilUsdCircle } from '@iconscout/react-unicons'
 
 export const ValueSection = () => {
   return (
-    <div className='p-12'>
+    <div className='p-6'>
     
       <div className="mb-12">
         <h2 className="text-[var(--text-primary)] text-4xl text-center">¿Porqué elegirnos?</h2>

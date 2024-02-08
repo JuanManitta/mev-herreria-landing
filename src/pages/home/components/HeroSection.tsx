@@ -24,7 +24,7 @@ export const HeroSection = () => {
             </div>
         </div>
 
-        <div className="col-span-12 sm:col-span-5 flex flex-col items-center justify-center mr-0 sm:mr-6 p-12 sm:p-0">
+        <div className="col-span-12 sm:col-span-5 flex flex-col items-center justify-center mr-0 sm:mr-6 p-6 sm:p-0">
             <div className='grid grid-cols-1 gap-10'>
                 <div>
                     <div>

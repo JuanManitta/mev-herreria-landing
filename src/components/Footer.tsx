@@ -33,7 +33,7 @@ export const Footer = () => {
     const navigate = useNavigate();
 
   return (
-    <section className="sm:h-[400px] bg-[color:var(--bg-secondary)] p-12 sm:p-16 relative">
+    <section className="sm:h-[400px] bg-[color:var(--bg-secondary)] p-6 sm:p-16 relative">
 
         <div className='hidden sm:block absolute top-10 right-0'>
             <img className=' sm:w-4/6' src={ArmcharLamp} alt="" />

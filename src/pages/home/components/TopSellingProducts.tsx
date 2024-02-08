@@ -14,7 +14,7 @@ export const TopSellingProducts = () => {
         <h4 className="text-center text-4xl font-semibold">Top ventas</h4>
       </div>
 
-      <div className="grid grid-cols-4 gap-12 p-12 sm:p-0">
+      <div className="grid grid-cols-4 gap-6 p-6 sm:p-0">
 
         <div className="col-span-4 sm:col-span-1">
           <img className='w-full h-64 object-cover' style={{borderRadius:'20px', opacity: 0.9}} src={middleImg} alt="" />

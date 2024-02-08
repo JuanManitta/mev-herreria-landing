@@ -19,7 +19,7 @@ export const ProductsPreview = () => {
 
   return (
     <>
-        <div className="col-span-12 order-last sm:order-first sm:col-span-6 p-12">
+        <div className="col-span-12 order-last sm:order-first sm:col-span-6 p-6">
             <main className="bg-[color:#d5d3c9]  rounded-3xl home_carousel_container">
               <section>
                 <EmblaCarousel slides={SLIDES} options={OPTIONS} />
@@ -30,7 +30,7 @@ export const ProductsPreview = () => {
             </div>
         </div>
 
-        <div className="p-12 col-span-12 sm:col-span-6 flex flex-col justify-center gap-10">
+        <div className="p-6 col-span-12 sm:col-span-6 flex flex-col justify-center gap-10">
             <div>
                 <h3 className='text-4xl font-semibold pt-12 sm:pt-0'>
                     Inspirá el interior de tu hogar.
