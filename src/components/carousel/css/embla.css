@@ -141,7 +141,5 @@
 }
 
 .home_carousel_container{
-  -webkit-box-shadow: 10px 10px 26px -8px #3D3B40;
-    -moz-box-shadow: 10px 10px 26px -8px #3D3B40;
-    box-shadow: 10px 10px 26px -8px #3D3B40;
+    box-shadow: 10px 10px 26px -20px #3D3B40;
 }

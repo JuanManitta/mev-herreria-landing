@@ -1,9 +1,9 @@
 
-import { extendBaseTheme  } from '@chakra-ui/react'
-import { menuTheme } from './menuTheme'
+import { extendBaseTheme, theme as chakraTheme  } from '@chakra-ui/react'
 import { globalProps } from './globalTheme'
+import { inputTheme, menuTheme } from '.'
 
-// const { Menu } = chakraTheme.components
+const { Form, Spinner } = chakraTheme.components
 
   
   export const theme = extendBaseTheme({
@@ -37,8 +37,23 @@ import { globalProps } from './globalTheme'
             }
           }
       },
-      Menu: menuTheme
-      
+      Menu: menuTheme,
+      Form,
+      Spinner,
+      Input: inputTheme,
+      Textarea:{
+        baseStyle:{
+          fontFamily: 'Poppins',
+          padding: '2rem',
+          borderRadius: 'xl',
+          width: '100%',
+          bg: '#F1F0ED',
+          border: '2px solid var(--bg-primary)',
+          _focus: { 
+            outlineColor: 'var(--bg-primary)',
+          }
+        }
+      }
     },
   })
   

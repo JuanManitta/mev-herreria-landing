@@ -14,6 +14,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@iconscout/react-unicons": "^2.0.2",
+    "animate.css": "^4.1.1",
     "embla-carousel-autoplay": "^8.0.0-rc22",
     "embla-carousel-react": "^8.0.0-rc22",
     "framer-motion": "^11.0.3",

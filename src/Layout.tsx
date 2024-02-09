@@ -79,9 +79,9 @@ export const Layout = ( {children}: LayoutProps ) => {
                 </Menu>
             </div>
 
-            <div>
+            <div className='cursor-pointer'>
                 <img onClick={() => navigate('/')} 
-                className={`${scrolled ? 'w-[120px]' :'w-[200px]'} cursor-pointer' transition-all`} 
+                className={`${scrolled ? 'w-[120px]' :'w-[200px]'} ' transition-all`} 
                 src={Logo} alt="" />
             </div>
 

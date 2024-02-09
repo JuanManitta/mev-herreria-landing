@@ -20,7 +20,7 @@ export const ProductsPreview = () => {
   return (
     <>
         <div className="col-span-12 order-last sm:order-first sm:col-span-6 mt-12">
-            <main className="bg-[color:#d5d3c9]  rounded-3xl home_carousel_container">
+            <main className="bg-[color:#d5d3c9] rounded-3xl home_carousel_container p-3">
               <section>
                 <EmblaCarousel slides={SLIDES} options={OPTIONS} />
               </section>

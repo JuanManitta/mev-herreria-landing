@@ -15,9 +15,15 @@ export const HeroSection = () => {
                 <div className='flex justify-center'>
                     <div className='bg-[color:var(--text-secondary)] w-[1.5px] h-32'></div>
                 </div>
+                <div className='cursor-pointer'>
                     <UilEnvelope color='var(--text-secondary)' size="25" />
+                </div>
+                <div className='cursor-pointer'>
                     <UilInstagram color='var(--text-secondary)' size="25" />
+                </div>
+                <div className='cursor-pointer'>
                     <UilWhatsapp color='var(--text-secondary)' size="25"/>
+                </div>
                 <div className='flex justify-center'>
                     <div className='bg-[color:var(--text-secondary)] w-[1.5px] h-32'></div>
                 </div>

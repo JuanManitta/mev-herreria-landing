@@ -10,7 +10,7 @@ export const TopSellingProducts = () => {
   return (
     <div>
 
-      <div className="flex items-center justify-center mb-12">
+      <div className="flex items-center justify-center mb-16">
         <h4 className="text-center text-4xl font-semibold">Top ventas</h4>
       </div>
 
