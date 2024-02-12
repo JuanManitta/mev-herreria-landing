@@ -30,13 +30,12 @@ export const Galery = () => {
 
   return (
     <main className="max-w-7xl m-auto py-10">
-      <h1 className="">hola</h1>
       { loading ? 
       <div className="h-[calc(100vh-140px)] flex items-center justify-center"> 
         <Spinner thickness='5px' size='xl' speed='1s' emptyColor='#F1F0ED' color='var(--bg-secondary)'/> 
       </div> :
 
-      <section className="p-6 py-12 flex flex-wrap ">
+      <section className="p-3 sm:p-6 py-12 flex flex-wrap ">
       {imgList.map((img, index) => (
         <div key={index} className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/3 p-2 ">
           <img src={img} alt="img" className="w-full h-full object-cover rounded-xl "/>

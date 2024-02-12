@@ -32,7 +32,7 @@ export const ContactInfo = () => {
             )) }
         </ul>
 
-        <div className="flex justify-around gap-4">
+        <div className="flex flex-col sm:flex-row justify-around gap-4">
           <div>
             <span className="text-lg font-semibold">La mar en coche</span>
             <p className="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. A aut assumenda dolorem?</p>
@@ -41,7 +41,7 @@ export const ContactInfo = () => {
             <span className="text-lg font-semibold">La mar en coche</span>
             <p className="mt-2">Lorem ipsum dolor sit amet co ad? Praesentium voluptate consequatur cor aut assumenda dolorem?</p>
           </div>
-          <div>
+          <div className='mb-12 sm:mb-0'>
             <span className="text-lg font-semibold">La mar en coche</span>
             <p className="mt-2">Lorem ipsum dolor sit amet, ad? Praesentium voluptate consequatur cor aut assumenda dolorem?</p>
           </div>
