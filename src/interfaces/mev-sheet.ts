@@ -3,7 +3,5 @@ export type Product = {
     product_description: string;
     product_img: string;
     product_name: string;
+    id: string;
   }
-
-export type Categories = string[];
-export type ProductsNames = string[];

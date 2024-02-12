@@ -3,7 +3,7 @@ import { extendBaseTheme, theme as chakraTheme,  } from '@chakra-ui/react';
 import { globalProps } from './globalTheme'
 import { inputTheme, menuTheme } from '.'
 
-const { Form, Spinner, Tabs, Card, Divider } = chakraTheme.components
+const { Form, Spinner, Tabs, Card, Divider, Skeleton } = chakraTheme.components
 
   
   export const theme = extendBaseTheme({
@@ -42,6 +42,7 @@ const { Form, Spinner, Tabs, Card, Divider } = chakraTheme.components
       Form,
       Tabs,
       Divider,
+      Skeleton,
 
       Menu: menuTheme,
       Input: inputTheme,
