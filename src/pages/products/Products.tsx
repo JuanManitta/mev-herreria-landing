@@ -26,8 +26,6 @@ export const Products = () => {
       setCategories(categories);
 
       setLoading(false);
-      console.log(products, categories);
-      
     };
     fetchData();
   }, []);
@@ -35,7 +33,7 @@ export const Products = () => {
 
 
   return (
-    <main className="max-w-7xl m-auto p-6 py-14">
+    <main className="max-w-7xl m-auto p-0 sm:px-6 py-14">
       {loading ? (
         <LoadingSkelleton />
       ) : (
@@ -51,7 +49,7 @@ export const Products = () => {
             bg="var(--bg-secondary)"
             borderRadius="5px"
           />
-          <TabPanels className='p-6 '>
+          <TabPanels className='sm:p-6 '>
             {categories.map(category => (
               <TabPanel key={category.id} className='flex flex-wrap gap-3 justify-center'>
                 {products
