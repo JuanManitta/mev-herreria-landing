@@ -35,12 +35,12 @@ export const Products = () => {
 
 
   return (
-    <main className="max-w-7xl m-auto p-6 py-12">
+    <main className="max-w-7xl m-auto p-6 py-14">
       {loading ? (
         <LoadingSkelleton />
       ) : (
-        <Tabs position="relative" variant="unstyled">
-          <TabList>
+        <Tabs position="relative" variant='unestyled'>
+          <TabList sx={{display:'flex', justifyContent:'center'}}>
             {categories.map(category => (
               <Tab key={category.id} className='font-semibold'>{category.category_name}</Tab>
             ))}
@@ -51,9 +51,9 @@ export const Products = () => {
             bg="var(--bg-secondary)"
             borderRadius="5px"
           />
-          <TabPanels>
+          <TabPanels className='p-6 '>
             {categories.map(category => (
-              <TabPanel key={category.id} className='flex flex-wrap gap-6'>
+              <TabPanel key={category.id} className='flex flex-wrap gap-3 justify-center'>
                 {products
                   .filter(product => product.product_category === category.id)
                   .map(product => (
