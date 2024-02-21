@@ -3,7 +3,7 @@ import Logo from './assets/mev-logo.png'
 import { Footer } from './components/Footer'
 import { useEffect, useState } from 'react';
 import { IconButton, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
-import { Armchair, Home, Image, Mail, MenuIcon, PersonStanding } from 'lucide-react';
+import { Armchair, Home, Image, Mail, MenuIcon } from 'lucide-react';
 
 type LayoutProps = {
     children: React.ReactNode
