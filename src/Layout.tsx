@@ -29,11 +29,11 @@ const menu = [
         url: '/contacto',
         icon: <Mail size={20} />
     },
-    {
-        name: 'About',
-        url: '/about',
-        icon: <PersonStanding size={20} />
-    }
+    // {
+    //     name: 'About',
+    //     url: '/about',
+    //     icon: <PersonStanding size={20} />
+    // }
 ];
 
 
@@ -58,7 +58,7 @@ export const Layout = ( {children}: LayoutProps ) => {
     
   return (
     <>
-    <nav className={` h-[60px] sticky top-0 ${scrolled ? 'bg-[color:var(--bg-primary)] z-50 shadow-lg' : ''}`}>
+    <nav className={`z-50 h-[60px] sticky top-0 ${scrolled ? 'bg-[color:var(--bg-primary)] z-50 shadow-lg' : ''}`}>
 
         <div className='max-w-7xl m-auto flex justify-between sm:justify-around px-6 sm:p-0'>
 

@@ -51,7 +51,7 @@ export const Products = () => {
           />
           <TabPanels className='sm:p-6 '>
             {categories.map(category => (
-              <TabPanel key={category.id} className='flex flex-wrap gap-3 justify-center'>
+              <TabPanel key={category.id} className='flex flex-wrap gap-3 justify-center mt-'>
                 {products
                   .filter(product => product.product_category === category.id)
                   .map(product => (

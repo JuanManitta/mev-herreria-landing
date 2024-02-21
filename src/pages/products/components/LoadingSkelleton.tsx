@@ -2,33 +2,31 @@ import { Skeleton } from "@chakra-ui/react"
 
 export const LoadingSkelleton = () => {
   return (
-    <div className='h-screen'>
-        <Skeleton height='20px' width='80%' />
-        <div className='flex flex-wrap gap-6 p-6'>
+    <div className='pt-12 flex flex-col items-center'>
+        <Skeleton height='30px'className="w-5/6"  rounded={8} />
+        <div className='sm:flex sm:flex-wrap grid gap-6 p-6'>
           <div className='flex flex-col gap-4'>
-            <Skeleton className='' height='250px' width='200px' rounded='lg' />
-            <Skeleton height='20px' width='80px' />
-            <Skeleton height='20px' width='160px' />
-            <Skeleton height='60px' width='150px' rounded='xl' />
+            <Skeleton className='' height='350px' width='100%' rounded='lg' />
+            <Skeleton height='20px' width='120px' />
+            <Skeleton height='30px' width='100%' />
+            <Skeleton height='30px' width='100%' />
+            <Skeleton height='60px' width='300px' rounded='xl' />
           </div>
           <div className='flex flex-col gap-4'>
-            <Skeleton className='' height='250px' width='200px' rounded='lg' />
-            <Skeleton height='20px' width='80px' />
-            <Skeleton height='20px' width='160px' />
-            <Skeleton height='60px' width='150px' rounded='xl' />
+            <Skeleton className='' height='350px' width='100%' rounded='lg' />
+            <Skeleton height='20px' width='120px' />
+            <Skeleton height='30px' width='100%' />
+            <Skeleton height='30px' width='100%' />
+            <Skeleton height='60px' width='300px' rounded='xl' />
           </div>
           <div className='flex flex-col gap-4'>
-            <Skeleton className='' height='250px' width='200px' rounded='lg' />
-            <Skeleton height='20px' width='80px' />
-            <Skeleton height='20px' width='160px' />
-            <Skeleton height='60px' width='150px' rounded='xl' />
+            <Skeleton className='' height='350px' width='100%' rounded='lg' />
+            <Skeleton height='20px' width='120px' />
+            <Skeleton height='30px' width='100%' />
+            <Skeleton height='30px' width='100%' />
+            <Skeleton height='60px' width='300px' rounded='xl' />
           </div>
-          <div className='flex flex-col gap-4'>
-            <Skeleton className='' height='250px' width='200px' rounded='lg' />
-            <Skeleton height='20px' width='80px' />
-            <Skeleton height='20px' width='160px' />
-            <Skeleton height='60px' width='150px' rounded='xl' />
-          </div>
+         
         </div>   
       </div>
   )
