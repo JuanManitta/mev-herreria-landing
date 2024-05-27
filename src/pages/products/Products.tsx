@@ -1,28 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { Tabs, TabList, TabPanels, Tab, TabPanel, TabIndicator, } from '@chakra-ui/react';
+import { getCategories, getData } from "../../api";
 
-import { getCategories, getData } from '../../api';
+import { Categories, Product } from "../../interfaces";
 
-import { LoadingSkelleton, ProductCard } from './components';
-import { Categories, Product } from '../../interfaces';
-
+import { Filters } from "./components/Filters";
+import { ProductGrid } from "./components/ProductGrid";
 
 export const Products = () => {
-
   const [products, setProducts] = useState<Product[]>([]);
-  const [categories, setCategories] = useState<Categories[]>([])
-  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState<Categories[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
 
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
-      setLoading(true)
+      setLoading(true);
 
       const { data: products } = await getData();
       setProducts(products);
 
-      const { data: categories }   = await getCategories();
+      const { data: categories } = await getCategories();
       setCategories(categories);
 
       setLoading(false);
@@ -30,38 +29,18 @@ export const Products = () => {
     fetchData();
   }, []);
 
-
-
+  
   return (
-    <main className="max-w-7xl m-auto p-0 sm:px-6 py-14">
-      {loading ? (
-        <LoadingSkelleton />
-      ) : (
-        <Tabs position="relative" variant='unestyled'>
-          <TabList sx={{display:'flex', justifyContent:'center'}}>
-            {categories.map(category => (
-              <Tab key={category.id} className='font-semibold'>{category.category_name}</Tab>
-            ))}
-          </TabList>
-          <TabIndicator
-            mt="-1.5px"
-            height="3px"
-            bg="var(--bg-secondary)"
-            borderRadius="5px"
-          />
-          <TabPanels className='sm:p-6 '>
-            {categories.map(category => (
-              <TabPanel key={category.id} className='flex flex-wrap gap-3 justify-center mt-'>
-                {products
-                  .filter(product => product.product_category === category.id)
-                  .map(product => (
-                    <ProductCard key={product.id} product={product} />
-                  ))}
-              </TabPanel>
-            ))}
-          </TabPanels>
-        </Tabs>
-      )}
+    <main className="max-w-7xl min-h-[70vh] m-auto p-0 sm:px-6 py-14">
+      <Filters
+        categories={categories}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <ProductGrid
+        loading={loading}
+        products={products}
+        selectedCategory={selectedCategory}
+      />
     </main>
-  )
-}
+  );
+};
