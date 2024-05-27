@@ -69,8 +69,8 @@ export const theme = extendBaseTheme({
         padding: '2rem',
         borderRadius: 'xl',
         width: '100%',
-        bg: '#F1F0ED',
-        border: '2px solid var(--bg-primary)',
+        bg: 'var(--bg-primary)',
+        border: '1px solid #61606252',
         _focus: {
           outlineColor: 'var(--bg-primary)',
         }

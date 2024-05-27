@@ -11,6 +11,7 @@ export const Products = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [categories, setCategories] = useState<Categories[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("ALL");
+  const [value, setValue] = useState<string>("a");
 
   const [loading, setLoading] = useState(true);
 
@@ -29,17 +30,23 @@ export const Products = () => {
     fetchData();
   }, []);
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);    
+  }
+
   
   return (
     <main className="max-w-7xl min-h-[70vh] m-auto p-0 sm:px-6 py-14">
       <Filters
         categories={categories}
         setSelectedCategory={setSelectedCategory}
+        handleChange={handleChange}
       />
       <ProductGrid
         loading={loading}
         products={products}
         selectedCategory={selectedCategory}
+        value={value}
       />
     </main>
   );

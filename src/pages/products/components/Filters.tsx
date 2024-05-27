@@ -17,9 +17,10 @@ import { useState } from "react";
 type Props = {
   categories: Categories[];
   setSelectedCategory: (id: string) => void;
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const Filters = ({ categories, setSelectedCategory }: Props) => {
+export const Filters = ({ categories, setSelectedCategory, handleChange }: Props) => {
   const [categoryName, setCategoryName] = useState("Selecionar categoria");
 
   const handleSetCategory = (id: string) => {
@@ -35,6 +36,7 @@ export const Filters = ({ categories, setSelectedCategory }: Props) => {
       setCategoryName(category.category_name);
     }
   };
+
 
   return (
     <Box
@@ -55,10 +57,9 @@ export const Filters = ({ categories, setSelectedCategory }: Props) => {
             {categoryName}
           </MenuButton>
           {categories.length > 0 && (
-            <MenuList zIndex='2'>
+            <MenuList zIndex="2">
               {categories.map((category) => (
                 <MenuItem
-                
                   key={category.id}
                   onClick={() => handleSetCategory(category.id)}
                 >
@@ -78,7 +79,12 @@ export const Filters = ({ categories, setSelectedCategory }: Props) => {
           <InputLeftElement pointerEvents="none">
             <Search />
           </InputLeftElement>
-          <Input type="tel" placeholder="Buscar producto" />
+          <Input
+            type="tel"
+            variant="search"
+            placeholder="Buscar producto"
+            onChange={handleChange}
+          />
         </InputGroup>
       </Box>
     </Box>

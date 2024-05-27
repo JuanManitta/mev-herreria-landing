@@ -9,8 +9,14 @@ type Props = {
   loading: boolean;
   products: Product[];
   selectedCategory: string;
+  value: string;
 };
-export const ProductGrid = ({ loading, products, selectedCategory }: Props) => {
+export const ProductGrid = ({
+  loading,
+  products,
+  selectedCategory,
+  value,
+}: Props) => {
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -21,8 +27,15 @@ export const ProductGrid = ({ loading, products, selectedCategory }: Props) => {
     const filteredProducts = products.filter(
       (product) => product.product_category === selectedCategory
     );
+
     setFilteredProducts(filteredProducts);
+    console.log(filteredProducts);
   }, [products, selectedCategory]);
+
+  const lowercasedValue = value.toLowerCase();
+  const filteredByValue = filteredProducts.filter((product) =>
+    product.product_name.toLowerCase().includes(lowercasedValue)
+  );
 
   return (
     <>
@@ -36,12 +49,14 @@ export const ProductGrid = ({ loading, products, selectedCategory }: Props) => {
           gap="4"
           p={{ base: "1rem", md: "0" }}
         >
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
+          {filteredByValue.length > 0 ? (
+            filteredByValue.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))
           ) : (
-            <NotFoundProduct />
+            <>
+              <NotFoundProduct />
+            </>
           )}
         </Box>
       )}
